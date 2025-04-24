@@ -74,7 +74,7 @@ keyButton.BackgroundColor3 = Color3.fromRGB(80, 80, 120)
 redeemButton.MouseButton1Click:Connect(function()
 	if textbox.Text == "Bubbler" then
 		pcall(function()
-			loadstring(game:HttpGet("loadstring(game:HttpGet("https://raw.githubusercontent.com/plutoguy/nectohub/refs/heads/main/loader.lua"))()"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/plutoguy/nectohub/refs/heads/main/loader.lua"))()
 		end)
 		
 		StarterGui:SetCore("SendNotification", {

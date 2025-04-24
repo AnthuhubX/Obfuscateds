@@ -72,36 +72,38 @@ keyButton.BackgroundColor3 = Color3.fromRGB(80, 80, 120)
 
 -- Button Functions
 redeemButton.MouseButton1Click:Connect(function()
-	if textbox.Text == "Bubbler" then
-		pcall(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/plutoguy/nectohub/refs/heads/main/loader.lua"))()
-		end)
-		
-		StarterGui:SetCore("SendNotification", {
-			Title = "Success!",
-			Text = "Script is loaded! credits to Pluto for making this script",
-			Duration = 4
-		})
-		
-		screenGui:Destroy()
-	else
-		StarterGui:SetCore("SendNotification", {
-			Title = "Invalid Key",
-			Text = "The key you entered is incorrect.",
-			Duration = 3
-		})
-	end
+if textbox.Text == "Bubbler" then
+pcall(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/plutoguy/nectohub/refs/heads/main/loader.lua"))()
+end)
+
+StarterGui:SetCore("SendNotification", {
+		Title = "Success!",
+		Text = "Script is loaded! credits to Pluto for making this script",
+		Duration = 4
+	})
+	
+	screenGui:Destroy()
+else
+	StarterGui:SetCore("SendNotification", {
+		Title = "Invalid Key",
+		Text = "The key you entered is incorrect.",
+		Duration = 3
+	})
+end
+
+
 end)
 
 keyButton.MouseButton1Click:Connect(function()
-	setclipboard("https://discord.gg/VmnHQKp8Ud")
-	StarterGui:SetCore("SendNotification", {
-		Title = "Copied!",
-		Text = "Key link copied to clipboard.",
-		Duration = 2
-	})
+setclipboard("https://discord.gg/VmnHQKp8Ud")
+StarterGui:SetCore("SendNotification", {
+Title = "Copied!",
+Text = "Key link copied to clipboard.",
+Duration = 2
+})
 end)
 
 closeButton.MouseButton1Click:Connect(function()
-	screenGui:Destroy()
+screenGui:Destroy()
 end)

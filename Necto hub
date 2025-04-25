@@ -84,7 +84,6 @@ StarterGui:SetCore("SendNotification", {
 		Duration = 4
 	})
 	
-	screenGui:Destroy()
 else
 	StarterGui:SetCore("SendNotification", {
 		Title = "Invalid Key",

@@ -72,9 +72,10 @@ keyButton.BackgroundColor3 = Color3.fromRGB(80, 80, 120)
 
 -- Button Functions
 redeemButton.MouseButton1Click:Connect(function()
-if textbox.Text == "Bubbler" then
+if textbox.Text == "PETUPDATE" then
 pcall(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/plutoguy/nectohub/refs/heads/main/loader.lua"))()
+getgenv().license = "Kiro Hub"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/plutoguy/scriptmodule/refs/heads/s/p.lua"))()
 end)
 
 StarterGui:SetCore("SendNotification", {
